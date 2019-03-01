@@ -1,0 +1,38 @@
+<aura:component controller="showProductInformationController" 
+				implements="flexipage:availableForRecordHome,force:hasRecordId" 
+				access="global" >
+    
+    <aura:attribute name="productName" type="String" access="Private"/>
+    <aura:attribute name="homeCountry" type="String" access="Private"/>
+    <aura:attribute name="Cost" type="String" access="Private"/>
+    <aura:attribute name="AtmFee" type="String" access="Private"/>
+    <aura:attribute name="cardReplacementCost" type="String" access="Private"/>
+    
+    <aura:attribute name="recordId" type="Id" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    
+	<div class="container">
+        <lightning:card>
+        <div class="row" style="margin-left:1%;">
+            <h2 class="header"><strong>Product Name : </strong> {!v.productName} &nbsp;&nbsp;&nbsp;&nbsp;<strong> Home Country : </strong> {!v.homeCountry} </h2>
+            
+            </div><br/>
+        <div class="row" style="margin-left:1%;">
+            <h2 class="header"><strong>Cost per Calender Month :&nbsp;</strong> {!v.Cost}</h2>
+           
+        </div>
+        <div class="row" style="margin-left:1%;">
+            <h2 class="header"><strong>ATM Fee :&nbsp;</strong> {!v.AtmFee}</h2>
+            
+        </div>
+        <div class="row" style="margin-left:1%;">
+            <h2 class="header"><strong>Card Replacement Cost :&nbsp;</strong> {!v.cardReplacementCost}</h2>
+            
+        </div>
+        
+       
+        </lightning:card>
+    </div>
+</aura:component>

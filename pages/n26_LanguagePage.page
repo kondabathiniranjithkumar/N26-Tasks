@@ -1,0 +1,4 @@
+<apex:page language="{!$CurrentPage.parameters.languageParam}" contentType="application/json" showHeader="false" sidebar="false"
+           standardStylesheets="false">
+	{!$Label[$CurrentPage.parameters.labelParam]}
+</apex:page>
